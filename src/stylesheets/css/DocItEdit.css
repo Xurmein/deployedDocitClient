@@ -1,0 +1,9 @@
+.modal{
+    background: whitesmoke;
+    margin: auto;
+    padding: 15px;
+   top: 33%;
+    
+    background-size: cover;
+    width: fit-content;
+}

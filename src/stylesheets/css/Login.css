@@ -1,0 +1,27 @@
+.login{
+    background: url('../assets/login.png') no-repeat center;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+}
+
+.logout{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left:30%;
+    padding: 8px;
+    z-index: 10;
+    font-family: 'Permanent Marker', sans-serif;
+    background: #FFB8B6;
+    border-radius: 100%;
+    border: 3px solid #A10400
+}
+
+.logout p{
+    margin-top: 25px;
+    font-size: 20px;
+    color: #501515;
+}

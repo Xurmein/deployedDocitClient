@@ -1,0 +1,86 @@
+.user-nav-container{
+    position: fixed;
+    top:355px;
+    right: 100px;
+    z-index: 15;  
+    padding-right: 30px;
+    background: yellow;
+    align-items: center;
+    height:275px;
+    border-radius: 15%;
+    border: 5px groove orange;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.nav-table{
+    width: 200px;
+    height: fit-content;
+}
+
+button{
+    height: 80px;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 100%;
+}
+
+.home-button{
+    background: url('../assets/success.png') no-repeat center;
+    background-color: #A9D7E9;
+    z-index: 1;
+}
+
+.about-button{
+    position: relative;
+    background: url('../assets/error.png') no-repeat center;
+    top: -25px;
+    background-color: #A9D7E9;
+    z-index: 2;
+}
+
+.event-button{
+    position: relative;
+    background: url('../assets/add-event.png') no-repeat center;
+    top: -50px;
+    background-color: #A9D7E9;
+    z-index: 3;
+}
+
+.feature-button{
+    position: relative;
+    background: url('../assets/create-cat.png') no-repeat center;
+    top: -75px;
+    background-color: #A9D7E9;
+    z-index: 4;
+}
+
+
+
+
+.register-button{
+    position: relative; 
+    background: url('../assets/register.png') no-repeat center;
+    background-color: #A9D7E9;
+    z-index: 5;
+    align-self: center;
+}
+
+.login-button{
+    position: relative;
+    background: url('../assets/login.png') no-repeat center;
+    background-color: #A9D7E9;
+    z-index: 5;   
+    align-self: center;
+}
+
+.offset1, .offset2{
+    padding-left: 50px;
+} 
+
+.label{
+    font-family: 'Lato', sans-serif;
+    color: #A10400
+}

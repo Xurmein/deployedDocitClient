@@ -1,0 +1,34 @@
+.header{
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  background:#C0C0C0;
+  z-index: 2;
+}
+
+.header-title{
+  width: fit-content;
+  font-size: 110px;
+  margin: auto;
+  padding-right: 10%;
+  padding-top: 1%;
+  float: right;
+  text-align: left;
+  color:#31614E;
+  font-family: 'Permanent Marker', Arial;
+  z-index: 3;
+}
+
+.header-image{
+  top: 0;
+  position: relative;
+  float: left;
+  height: 200px;
+  width: 200px;
+  background: url('../assets/HatchfulExport-All/logo_transparent.png') no-repeat center;
+  z-index: 2;
+  background-size: contain;
+  margin: 0;
+  padding: 0;
+}

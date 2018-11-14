@@ -1,0 +1,39 @@
+.register-login-containerDiv{
+    
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+  
+    position: relative;
+    z-index: 10;
+    width: auto;
+    align-content: center;
+}
+
+.register-containerDiv{
+    position: relative;
+}
+
+.register{
+    background: url('../assets/register.png') no-repeat center;
+    z-index: 5;
+    height: 50px;
+    width: 50px;
+}
+
+.label{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #FFB8B6
+}
+
+
+h3{
+    font-family: 'Permanent Marker', Arial;
+    color: #f0fbff;
+    text-align: center;
+    vertical-align: center;
+    font-size: 40px; 
+    margin: 0;
+}

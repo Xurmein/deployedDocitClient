@@ -1,0 +1,32 @@
+footer{
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    padding: 0;
+    margin: 15px 0 0 0;
+    bottom: 0;
+    background-color: #C0C0C0;
+    z-index: 10;
+}
+
+footer p{
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #f0fbff;
+    margin: 5px 0 5px 0;
+}
+
+.byline{
+    float: left;
+    padding-left: 75px;
+}
+
+.copy{
+    float: left;
+    padding-left: 10px;
+}
+
+.citations{
+    float: right;
+    padding-right: 75px
+}

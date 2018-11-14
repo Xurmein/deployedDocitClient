@@ -1,0 +1,8 @@
+.jumbo{
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    background: url('../assets/blur-checklist-close-up-131979.jpg') no-repeat center;
+    background-size: cover;
+    z-index: 1;
+}
