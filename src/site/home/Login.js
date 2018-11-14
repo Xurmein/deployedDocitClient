@@ -7,6 +7,8 @@ import {
     Button
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import APIURL from '../../helpers/environment';
+
 
 class Login extends Component{
     constructor(props){
@@ -24,7 +26,7 @@ class Login extends Component{
     }
 
     handleSubmit = (event) => {
-        fetch(`http://localhost:3666/visitor/user/login`, {
+        fetch(`${APIURL}/visitor/user/login`, {
             method: 'POST',
             body: JSON.stringify({user:this.state}),
             headers: new Headers({

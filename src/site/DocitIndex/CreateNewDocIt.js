@@ -6,6 +6,8 @@ import {
     Label,
     Input
 } from 'reactstrap';
+import APIURL from '../../helpers/environment';
+
 
 class NewDocIt extends Component{
     constructor(props){
@@ -28,7 +30,7 @@ class NewDocIt extends Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-            fetch('http://localhost:3666/my/docit-index/docitCreate', {
+            fetch(`${APIURL}/my/docit-index/docitCreate`, {
                 method : 'POST',
                 body : JSON.stringify({ docit : this.state}),
                 headers :  new Headers({

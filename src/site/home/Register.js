@@ -7,8 +7,8 @@ import {
     Button
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import APIURL from '../../helpers/environment';
 
-// const APIURL = 'https://docitserver.herokuapp.com/'
 class Register extends Component{
     constructor(props){
         super(props) 
@@ -25,7 +25,7 @@ class Register extends Component{
     }
 
     handleSubmit = (event) => {
-        fetch(`http://localhost:3666/visitor/user/register`,{ //fetch(`${APIURL}user/register`, 
+        fetch(`${APIURL}/visitor/user/register`,{ 
             method: 'POST',
             body: JSON.stringify({user:this.state}),
             headers: new Headers({

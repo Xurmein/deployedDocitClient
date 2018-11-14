@@ -9,6 +9,8 @@ import {
     ModalHeader,
     ModalBody,
 } from 'reactstrap';
+import APIURL from '../../helpers/environment';
+
 
 class DocItEdit extends Component {
     constructor(props){
@@ -44,7 +46,7 @@ class DocItEdit extends Component {
             }
         }
 
-        fetch(`http://localhost:3666/my/docit-index/docitUpdate/${docit.id}`, {
+        fetch(`${APIURL}/my/docit-index/docitUpdate/${docit.id}`, {
             method: 'PUT',
             body: JSON.stringify({ docit: chosenDocit }),
             headers: new Headers({

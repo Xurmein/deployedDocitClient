@@ -7,6 +7,7 @@ import {
 import NewDocIt from './CreateNewDocIt';
 import DocItTable from './DocItTable';
 import DocItEdit from './DocItEdit';
+import APIURL from '../../helpers/environment';
 
 
 class DocitIndex extends Component {
@@ -21,7 +22,7 @@ class DocitIndex extends Component {
     }
 
     fetchDocIts = () => {
-        fetch(`http://localhost:3666/my/docit-index/docits`, {
+        fetch(`${APIURL}/my/docit-index/docits`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -34,7 +35,7 @@ class DocitIndex extends Component {
     }    
 
     docitDelete = (event) => {
-        fetch(`http://localhost:3666/my/docit-index/docitDelete/${event.target.id}`, {
+        fetch(`${APIURL}/my/docit-index/docitDelete/${event.target.id}`, {
             method: 'DELETE',
             body: JSON.stringify({ docit: { id: event.target.id } }),
             headers: new Headers({
