@@ -28,10 +28,12 @@ class DocitIndex extends Component {
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
             })
-        }).then((response) => response.json())
-            .then((docitLog) => {
-                return this.setState({ docits: docitLog })
-            })
+        })
+        .then((response) => response.json())
+        .then((docitLog) => {
+            return this.setState({ docits: docitLog })
+        })
+        .then(() => console.log(this.state))
     }    
 
     docitDelete = (event) => {
@@ -44,8 +46,6 @@ class DocitIndex extends Component {
             })
         }).then((res) => this.fetchDocIts())
     }
-
-   
 
     pickDocitToEdit = (event, docit) => {
         this.setState({
@@ -103,8 +103,8 @@ class DocitIndex extends Component {
                                     <Col md="6">
                                     {
                                         /* chosenDocit = activity; */
-                                    this.state.updatePressed ? <DocItEdit t={this.state.updatePressed} docit={this.state.docitToUpdate} updateDocItArray={this.fetchDocIts} />
-                                    : <div className="modal"></div>
+                                    this.state.updatePressed ? <DocItEdit t={this.state.updatePressed} token={this.props.token} docit={this.state.docitToUpdate} updateDocItArray={this.fetchDocIts}/>
+                                    : <div></div>
                                     }
                                     </Col>
                                 </Row>

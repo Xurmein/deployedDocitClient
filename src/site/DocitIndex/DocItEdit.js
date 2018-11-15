@@ -16,7 +16,7 @@ class DocItEdit extends Component {
     constructor(props){
         super(props)
         this.state = {
-            id: props.chosenDocit,
+            id:'',
             owner : '',
             docName: '',
             day: '',
@@ -35,26 +35,28 @@ class DocItEdit extends Component {
             time: this.props.docit.time,
             description: this.props.docit.description,
             user_category: this.props.docit.user_category
-        })
+        }, () => console.log(this.state))
     }
 
     docitUpdate = (event, docit) => {
-        let chosenDocit;
-        for(let activity of this.state.docits){
-            if(activity.id === docit.id){
-               chosenDocit = activity;
-            }
-        }
-
-        fetch(`${APIURL}/my/docit-index/docitUpdate/${docit.id}`, {
+        fetch(`${APIURL}/my/docit-index/docitUpdate/${this.state.id}`, {
             method: 'PUT',
-            body: JSON.stringify({ docit: chosenDocit }),
+            body: JSON.stringify({ docit: {
+                id: this.props.docit.id,
+                owner: this.props.docit.owner,
+                docName: this.state.docName,
+                day: this.state.day,
+                time: this.state.time,
+                description: this.state.description,
+                user_category: this.state.user_category
+            }}),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
             })
             }).then((res) => {
-                this.fetchDocIts();
+                return res.json,
+                console.log(res.json),
                 this.setState({ updatePressed: false })
             })
     }
@@ -62,12 +64,13 @@ class DocItEdit extends Component {
     handleChange = (event) => {
         this.setState({
             [event.target.name] : event.target.value
-        })
+        }, () => console.log(this.state))
     }
     
     handleSubmit = (event) => { 
-        event.preventDefault();
-        this.props.update(event, this.state)
+       
+        this.docitUpdate();
+        this.props.updateDocItArray()
     }
 
   /* chosenDocit = activity; */
